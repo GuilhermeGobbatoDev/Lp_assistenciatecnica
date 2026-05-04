@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand: #0055FF; /* Pure Brand Blue */
+  --color-surface: #141414;
+  --color-border-subtle: #222222;
+  --color-border-bright: #333333;
+  --color-text-muted: #888888;
+  --color-text-dim: #666666;
+  --radius-sm: 0px;
+  --radius-md: 1px;
+  --radius-lg: 2px;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0A0A0A] text-[#F0F0F0] font-sans antialiased;
+  }
+}
+
+.sharp-border {
+  border-radius: 2px;
+}
+
+.grid-bg {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
