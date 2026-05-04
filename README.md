@@ -1,32 +1,20 @@
-Landing Page - Fixed Mobile (Assistência Técnica)
-Este projeto consiste em uma Landing Page de alta conversão desenvolvida para serviços de assistência técnica em dispositivos móveis. O foco principal é a velocidade de carregamento, design minimalista "sharp-edge" e direcionamento direto para conversão via WhatsApp.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Objetivo
-Proporcionar uma presença digital sólida para assistências técnicas, garantindo que o usuário encontre os serviços principais e os canais de contato em menos de 5 segundos.
+# Run and deploy your AI Studio app
 
-Tecnologias e Estilos
-Design: Estilo "Sharp" (bordas retas) para transmitir precisão técnica.
+This contains everything you need to run your app locally.
 
-Tema: Dark Mode com acentos em Azul Cobalto (Contraste Industrial).
+View your app in AI Studio: https://ai.studio/apps/6d053009-1602-4125-9e87-11c3bf3fe24f
 
-Ícones: Biblioteca de ícones lineares (sem uso de emojis).
+## Run Locally
 
-Responsividade: Otimizado para dispositivos móveis (onde ocorre a maioria das buscas por conserto).
+**Prerequisites:**  Node.js
 
-Estrutura da Página
-Hero Section: Proposta de valor e CTA imediato.
 
-Serviços: Grid modular com ícones técnicos (Troca de tela, Bateria, Reparo de placa).
-
-Diferenciais: Garantia e agilidade.
-
-Localização: Integração com Google Maps (opcional).
-
-Footer: Informações de contato e links sociais.
-
-Funcionalidades
-Botão de Orçamento: Link direto para o WhatsApp com mensagem pré-definida.
-
-Layout Modular: Fácil de adaptar para outros nichos de manutenção.
-
-SEO Local: Estruturado para ser indexado pelo Google em buscas regionais.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
