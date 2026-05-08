@@ -480,7 +480,7 @@ export default function App() {
                 </div>
                 <div>
                   <div className="text-[10px] font-bold text-[#444] uppercase tracking-[0.4em] mb-2">E-mail Comercial</div>
-                  <div className="text-xl font-bold tracking-tight text-[#888]">contato@empresa.com.br</div>
+                  <div className="text-xl font-bold tracking-tight text-[#888]">contato@fixedmobile.com.br</div>
                 </div>
               </motion.div>
 
