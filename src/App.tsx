@@ -14,7 +14,8 @@ import {
   Menu,
   X,
   ChevronRight,
-  Mail
+  Mail,
+  Star
 } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -57,6 +58,27 @@ const DIFFERENTIALS = [
     title: 'Orçamento em 15min',
     desc: 'Agilidade no diagnóstico para você não ficar desconectado.',
     icon: <Clock className="w-6 h-6 text-brand" />
+  }
+];
+
+const TESTIMONIALS = [
+  {
+    name: 'Roberto Silva',
+    role: 'Empresário',
+    content: 'Serviço de altíssima qualidade. O reparo do meu iPhone foi feito com uma precisão que nunca vi antes.',
+    rating: 5
+  },
+  {
+    name: 'Ana Oliveira',
+    role: 'Designer',
+    content: 'Equipe extremamente técnica e honesta. Diagnóstico rápido e preço justo. Recomendo fortemente.',
+    rating: 5
+  },
+  {
+    name: 'Carlos Santos',
+    role: 'Desenvolvedor',
+    content: 'O laboratório deles é impressionante. Equipamentos de ponta e atendimento nota 10.',
+    rating: 5
   }
 ];
 
@@ -336,6 +358,55 @@ export default function App() {
                 />
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-32 px-6 bg-[#050505] border-t border-[#222]">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+            }}
+            className="text-center mb-20"
+          >
+            <div className="text-brand text-xs font-bold tracking-[0.3em] uppercase mb-4">Feedback</div>
+            <h2 className="text-5xl font-black uppercase tracking-tight">O que dizem <br className="md:hidden" /> nossos clientes</h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {TESTIMONIALS.map((review, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-[#0A0A0A] border border-[#222] p-10 relative group hover:border-brand/40 transition-all"
+                style={{ borderRadius: '2px' }}
+              >
+                <div className="flex gap-1 text-brand mb-6">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star key={i} size={14} fill="currentColor" />
+                  ))}
+                </div>
+                <p className="text-[#888] text-sm leading-relaxed mb-8 italic">
+                  "{review.content}"
+                </p>
+                <div>
+                  <h4 className="text-white font-bold text-xs uppercase tracking-widest">{review.name}</h4>
+                  <span className="text-brand text-[9px] uppercase tracking-[0.2em] font-bold">{review.role}</span>
+                </div>
+                <div className="absolute top-10 right-10 text-[#222] group-hover:text-brand/10 transition-colors">
+                  <MessageCircle size={40} strokeWidth={1} />
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
